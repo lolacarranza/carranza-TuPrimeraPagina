@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <a href={% url "principio" %}>principio</a>
+        <a href={% url "listado_personas" %}>personas registradas en gym</a>
+    </nav>
+    <h1>Listado de personas en el gimnasio</h1>
+    {% if gimnasio %}
+    <ul>
+        {% for gimnasio in gimnasio %}
+        <li>
+    {{gimnasio}}
+        </il>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <p>No hay personas registradas en el gimnasio</p>
+    {% endif %}
+    
+</body>
+</html>

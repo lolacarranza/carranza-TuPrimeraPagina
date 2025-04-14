@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <nav>
+        <a href={% url "principio" %}>principio</a>
+        <a href={% url "listado_personas" %}>personas registradas en gym</a>
+    </nav>
+    <form action = "{% url "gimnasio" %}" method = "POST">
+        {% csrf_token %}
+        {{formulario}}
+        <button>Empezar el gimnasio</button>  
+    </form> 
+</body>
+</html>
